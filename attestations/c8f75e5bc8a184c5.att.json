@@ -1,0 +1,9 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "name": "L1_FORECAST_ERROR_CORRECTOR_PREREG_v01",
+    "note": "class=file; OTS-stamped 2026-08-29 via timestamp/stamp_pins.py; SUPERSEDED — artefact amended in place; current bytes pinned under 764d25d43e224a19…",
+    "pinned_utc": "2026-08-29T08:46:16Z",
+    "sha256": "c8f75e5bc8a184c5c35d92c5d366c89d36ca445d0d8535d46eb244615b14076f"
+  }
+}

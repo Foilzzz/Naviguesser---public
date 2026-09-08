@@ -1,0 +1,10 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "bytes": 30327,
+    "name": "F1_FORWARD_GUIDANCE_TRIAL_PREREG_v05",
+    "note": "class=file; v0.5 Amendment A5 (coverage-rule cycle selection, 20-lead set 6..120); OTS-stamped 2026-08-30",
+    "path": "corpus_intake/F1_FORWARD_GUIDANCE_TRIAL_PREREG.md",
+    "sha256": "697fedc6c3d90ac51f36b39281273f14fc86092dfc6b52f3840514f77bab4c14"
+  }
+}

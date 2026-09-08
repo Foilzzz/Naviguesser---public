@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naviguesser — public pre-commitment: the live fleet-drift verdict</title>
+<meta name="description" content="We are committing, publicly and in advance, to a result we have not seen.">
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #0b0f14; color: #d7dee6;
+       font: 17px/1.65 Georgia, 'Times New Roman', serif; }
+main { max-width: 760px; margin: 0 auto; padding: 48px 22px 96px; }
+h1 { font-size: 1.9rem; line-height: 1.25; color: #f2f5f8; margin: 0 0 .4em; }
+h2 { font-size: 1.25rem; color: #8fd0ff; margin: 2.2em 0 .6em;
+     font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+     letter-spacing: .02em; }
+p { margin: 1em 0; }
+a { color: #8fd0ff; }
+strong { color: #f2f5f8; }
+ul { padding-left: 1.4em; }
+li { margin: .4em 0; }
+blockquote { border-left: 3px solid #2b3d4d; margin: 1.4em 0;
+             padding: .2em 1.2em; color: #aebac6; }
+hr { border: none; border-top: 1px solid #22303d; margin: 2.6em 0; }
+code { font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+       font-size: .88em; background: #131b23; padding: .12em .35em;
+       border-radius: 4px; word-break: break-all; }
+.meta { font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+        font-size: .78rem; color: #6f8191; margin-top: 3.2em;
+        border-top: 1px solid #22303d; padding-top: 1.2em; }
+.meta div { margin: .3em 0; }
+.meta .k { color: #42566a; display: inline-block; min-width: 11em; }
+.badge { display: inline-block; font-family: ui-monospace, monospace;
+         font-size: .72rem; letter-spacing: .12em; color: #ffd27a;
+         border: 1px solid #5c4a20; border-radius: 3px;
+         padding: .25em .7em; margin-bottom: 1.6em; }
+</style>
+</head>
+<body>
+<main>
+<div class="badge">PRE-REGISTERED &middot; BLIND &middot; IN PROGRESS</div>
+<h1>Public pre-commitment: the live fleet-drift verdict</h1>
+<p><strong>Naviguesser · 2026-08-28</strong></p>
+<p>We are committing, publicly and in advance, to a result we have not seen.</p>
+<h2>What is being measured</h2>
+<p>Since 26 August 2026 we have been collecting live AIS vessel-tracking data across four declared coastal-approach zones, under a published methodology. Each day's data is hash-pinned into an append-only register at daily close-out. When a day stops without a clean seal — two already have — it is declared in the same record with its cause, its gaps and its rejects, never bridged or smoothed. Over eight consecutive weekly windows we will measure whether the fleet's observed speed behaviour <strong>drifts</strong> — whether the same kinds of vessels, in the same places, move measurably differently at the end of the period than at the start.</p>
+<p>The exact statistic and drift metric are being pinned inside the pre-registration <strong>no later than 4 September 2026</strong>, and in any case before the first window opens — window 1 does not start until they are fixed. Each fill lands as a dated, versioned amendment with its own hash, <strong>published to this page at the moment it is pinned</strong>. No statistic will be chosen after seeing the data it describes.</p>
+<h2>The bound, pinned before any window closed</h2>
+<p>Cross-window drift exceeding <strong>1.0 knot</strong> = the trial reports the fleet's behaviour moved beyond the bound. Pinned 27 August 2026, before window 1 exists. Its source chain is public and checkable: AIS speed over ground is broadcast in 1/10-knot steps (ITU-R M.1371, SOG field) — the bound sits ten times above the instrument's floor — and real fleet speed variation is larger than the bound: Goicoechea &amp; Abadie 2021 (<em>Energies</em> 14(22):7487, DOI 10.3390/en14227487) put the economically optimal container speed's own movement at ~1.8 kt across 2018–2019. (Source chain amended 29 August 2026 — see Amendments below.)</p>
+<h2>The windows</h2>
+<p>Eight weekly windows: declared, ordered, non-overlapping. Window 1 is the first ISO week fully sealed <em>after</em> a day-7 operational calibration gate passes <strong>and after the drift statistic has been pinned and published</strong> — if the statistic is not pinned, window 1 does not open, and the delay is declared here, not absorbed silently. Calibration data never enters the verdict windows. A window with fewer than six of seven days sealed is declared insufficient, never silently thinned. The verdict follows within seven days of the eighth window sealing; on current scheduling that lands in the first week of November 2026, and window 1's opening will be announced through this same channel when the gate passes.</p>
+<h2>The blind line</h2>
+<p>No drift statistic is computed on the live data before the eighth window seals — including by us. Weekly operations measure coverage, storage and data-quality rejects only. If we break this rule, the pre-registration requires that we stop and say so.</p>
+<h2>The pins</h2>
+<ul><li>Live-trial pre-registration (v0.2), sha256: <code>e0c6d2cb9f093fddd918af6f92d06b38d5d6017fcd1353abd962e29ee4421c58</code></li><li>Accrual pre-registration (the collection methodology), sha256: <code>1fd9c8d8ec750e13ac7e08189bb05290fa6eda491c0c6e1b53554d376ae5b700</code></li><li>Drift-statistic amendment, by 4 September 2026: its hash is added to this list at the moment it is pinned — before window 1 opens, so the pin's timestamp can be checked against the trial's start, not just its verdict.</li></ul>
+<p>When the verdict is published, these documents are published with it. Anyone can then check that the method was pinned before the measurement — the hash either predates the result or it doesn't.</p>
+<h2>What this trial can and cannot say</h2>
+<p>It measures coastal-approach behaviour only — terrestrial AIS coverage, by declaration, no open-ocean claim. It says nothing about any single vessel, nothing about hull condition, and nothing denominated in fuel, CO₂, or dollars. Its sibling study — the same 1.0 kt bound, pinned before computation, applied to six pre-registered monthly windows of 2023–2024 archived data — has already closed: cargo 0.60 kt, tanker 0.40 kt, both within the bound. The two studies corroborate each other; they are never merged into one claim.</p>
+<h2>The commitment</h2>
+<p>The verdict, the per-window table, the full pre-registration with its amendment chain, and the correction-log entry for anything that went wrong along the way — <strong>we will publish all of it, whatever it says.</strong></p>
+<p><em>Naviguesser — routing decisions that carry their own confidence.</em></p>
+<h2>Amendments</h2>
+<p><strong>29 August 2026 — citation verification of the bound's source chain.</strong> The sentence originally read: <em>"Its source chain is public: ISO 19030-2's 1 kt reference-condition filter (via the HiPer2022 reproduction of the ISO filter table, on the public record); Goicoechea et al. 2021 (Energies 14(22):7487) measuring ~1.8 kt container-speed fluctuation in rougher conditions; and AIS speed quantisation of 0.1 kt — the bound sits ten times above the instrument's floor."</em> Verified clause by clause before publication. The AIS clause resolves at the primary standard — ITU-R M.1371 carries speed over ground in 1/10-knot steps. The Goicoechea citation resolves exactly as cited (DOI 10.3390/en14227487) but was mis-framed: the paper's ~1.8 kt is the movement of the <em>modelled economically optimal</em> container speed across freight-market conditions in 2018–2019, not a measurement of speed fluctuation in rougher weather — the sentence now states what the paper measures. The ISO 19030-2 / HiPer2022 clause could not be verified against any public source and is removed rather than left uncheckable. The 1.0 kt bound itself is unchanged and remains pinned before any window closes; this amendment touches only its stated justification.</p>
+<div class="meta">
+<div><span class="k">this page is</span>generated from the source document, never hand-edited</div>
+<div><span class="k">source</span>public/T2_LIVE_PRECOMMITMENT.md</div>
+<div><span class="k">source sha256</span><code>7b72a2cf1ee35505&hellip;f9599</code></div>
+<div><span class="k">pinned document</span><code>e0c6d2cb9f093fdd&hellip;21c58</code></div>
+<div><span class="k">pinned document</span><code>1fd9c8d8ec750e13&hellip;5b700</code></div>
+<div><span class="k">statistic amendment</span>slot open — pinned here by 4 September 2026, before window 1 opens</div>
+<div><span class="k">page generated</span>2026-09-08T12:32:02Z</div>
+</div>
+</main>
+</body>
+</html>

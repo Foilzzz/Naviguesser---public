@@ -1,0 +1,216 @@
+{
+  "attestations": [
+    {
+      "action": "unchanged",
+      "attestation_file": "1afc7307605da064.att.json",
+      "attestation_sha256": "560a4985bc808f54dd3920f038cf8a729a161e805d1482b6e2ce3170f46ef8de",
+      "detail": "proof already present",
+      "proof_file": "1afc7307605da064.att.json.ots",
+      "stamped": true,
+      "subject_name": "AISSTREAM_ACCRUAL_AMENDMENT_A1",
+      "subject_sha256": "1afc7307605da064f052f95c9a1f230d3100602618c5fd72d7752535a611541c"
+    },
+    {
+      "action": "written",
+      "attestation_file": "1d02c2c78aa5843c.att.json",
+      "attestation_sha256": "89a6175e795888a37c9283cdf9e413f6b87f349990713c5b81270ffa9f2f2cd0",
+      "detail": "proof already present",
+      "proof_file": "1d02c2c78aa5843c.att.json.ots",
+      "stamped": true,
+      "subject_name": "F1_FORWARD_GUIDANCE_TRIAL_PREREG_v04",
+      "subject_sha256": "1d02c2c78aa5843cb66498db637ef168ed6fa512884a662eef20069c94cf4355"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "1fd9c8d8ec750e13.att.json",
+      "attestation_sha256": "7b196511b53ca03cb050f362cc720bb60f13011bf73acd355300a357aa0e3d7a",
+      "detail": "proof already present",
+      "proof_file": "1fd9c8d8ec750e13.att.json.ots",
+      "stamped": true,
+      "subject_name": "AISSTREAM_ACCRUAL_PREREG",
+      "subject_sha256": "1fd9c8d8ec750e13ac7e08189bb05290fa6eda491c0c6e1b53554d376ae5b700"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "20967a34bec59c18.att.json",
+      "attestation_sha256": "d98d5e6494788ae2405b15b679ab504cc289769865e3efe080d193bfec6190b3",
+      "detail": "proof already present",
+      "proof_file": "20967a34bec59c18.att.json.ots",
+      "stamped": true,
+      "subject_name": "T2_LIVE_PREREG_SKELETON_pack",
+      "subject_sha256": "20967a34bec59c18e7ed018a994e404d36f79ee2a131f9a3f5877687b0a5f729"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "38a845ff2c1fd688.att.json",
+      "attestation_sha256": "ad34bf9aed9e23551397e8bc53bc42901eb18327fe010c8f8d6e70deca836ba5",
+      "detail": "proof already present",
+      "proof_file": "38a845ff2c1fd688.att.json.ots",
+      "stamped": true,
+      "subject_name": "H_ROUTE_PREREG",
+      "subject_sha256": "38a845ff2c1fd688d89aaa85ae05a1190921f2b6946dcb20b309826099f326e5"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "6778952b57c70b22.att.json",
+      "attestation_sha256": "f68708d52a8e967f90e2d4087418e817a0ef631408521b7f22c0f9c5e6aeb0a2",
+      "detail": "proof already present",
+      "proof_file": "6778952b57c70b22.att.json.ots",
+      "stamped": true,
+      "subject_name": "AISSTREAM_ACCRUAL_AMENDMENT_A2",
+      "subject_sha256": "6778952b57c70b22be24287f539d50723f2e0ac3bf093f4dc49a3e3c2ad9e62e"
+    },
+    {
+      "action": "written",
+      "attestation_file": "697fedc6c3d90ac5.att.json",
+      "attestation_sha256": "ea1079e0d612fd05c41e88c9b18826880c9d48f8fd8d84f2ee11df500697da26",
+      "detail": "Submitting to remote calendar https://a.pool.opentimestamps.org\nSubmitting to remote calendar https://b.pool.opentimestamps.org\nSubmitting to remote calendar https://a.pool.eternitywall.com\nSubmitting to remote calendar https://ots.btc.catallaxy.com",
+      "proof_file": "697fedc6c3d90ac5.att.json.ots",
+      "stamped": true,
+      "subject_name": "F1_FORWARD_GUIDANCE_TRIAL_PREREG_v05",
+      "subject_sha256": "697fedc6c3d90ac51f36b39281273f14fc86092dfc6b52f3840514f77bab4c14"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "6a9586c4943ca17d.att.json",
+      "attestation_sha256": "4a286d3e5a949eb6077f387b3b4bfbe6d90c7466968ae71f9dea03d9d8a4724b",
+      "detail": "proof already present",
+      "proof_file": "6a9586c4943ca17d.att.json.ots",
+      "stamped": true,
+      "subject_name": "T2H_HISTORICAL_DRIFT_PREREG_v11_pack",
+      "subject_sha256": "6a9586c4943ca17d697d5b1defe8a97a58475fd3fda884f32da2f40e204e4a11"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "764d25d43e224a19.att.json",
+      "attestation_sha256": "ab1a93e154f180190e68319a2f1c2019d775cf8bf49ac77308c8c1c2fb816f70",
+      "detail": "proof already present",
+      "proof_file": "764d25d43e224a19.att.json.ots",
+      "stamped": true,
+      "subject_name": "L1_FORECAST_ERROR_CORRECTOR_PREREG_v02",
+      "subject_sha256": "764d25d43e224a19d1426afbc2704379bd76df7781c02acf8c0e6b9ec9db8af8"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "7b72a2cf1ee35505.att.json",
+      "attestation_sha256": "25b24c34326b99e8696f5a94bfd11912c60a1844bb6f1dfbffa7c8ed9a2db8b5",
+      "detail": "proof already present",
+      "proof_file": "7b72a2cf1ee35505.att.json.ots",
+      "stamped": true,
+      "subject_name": "T2_LIVE_PUBLIC_PRECOMMITMENT",
+      "subject_sha256": "7b72a2cf1ee35505c8785ceaeffd45f68af47529f9faa2ecba6763d81ecf9599"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "95a165733514f335.att.json",
+      "attestation_sha256": "35a26a2ae67fa8dedf723431924243176cbc6d3d5f000a9546e129775e5dfc8f",
+      "detail": "proof already present",
+      "proof_file": "95a165733514f335.att.json.ots",
+      "stamped": true,
+      "subject_name": "S1_SAVINGS_CADENCE_DECOMP_PREREG_pack",
+      "subject_sha256": "95a165733514f3353bd1c46629124ac558bf8bbb68378e1dd577eb998638cd1b"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "a0b918c03b63a500.att.json",
+      "attestation_sha256": "46553053c07b640bbebb6b2bbf20d52db9d770237ae06f487248c0d64d92e568",
+      "detail": "proof already present",
+      "proof_file": "a0b918c03b63a500.att.json.ots",
+      "stamped": true,
+      "subject_name": "T1_PREREG_SPEC",
+      "subject_sha256": "a0b918c03b63a50085965acea91f88205b6624a8db6bcfdcd4bd889d17a35938"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "af7c8eb6abc562da.att.json",
+      "attestation_sha256": "a58da81a6f6a9b0be291051606558819311cb270e4b2e5fe393c37c51f455efc",
+      "detail": "proof already present",
+      "proof_file": "af7c8eb6abc562da.att.json.ots",
+      "stamped": true,
+      "subject_name": "COHORT_STATS_PREREG",
+      "subject_sha256": "af7c8eb6abc562da1f497c8aa21084a9fc53b087833e7dc1523663abe9b609c7"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "b2b4d3cf17bbeb99.att.json",
+      "attestation_sha256": "07566d093dda5cf579061e66021ab6ec85264b80d82da32ab915c644b247059a",
+      "detail": "proof already present",
+      "proof_file": "b2b4d3cf17bbeb99.att.json.ots",
+      "stamped": true,
+      "subject_name": "S1_AMENDMENT_A3_pack",
+      "subject_sha256": "b2b4d3cf17bbeb9942910c1b2d500fecc62549a5fa3d926f92e865d681a3c34f"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "bdeaa17203ebdf6e.att.json",
+      "attestation_sha256": "624017c8670a89033f3e74d80ce85759a1b3ddcc9b48f163cb1ef5561ccc1b48",
+      "detail": "proof already present",
+      "proof_file": "bdeaa17203ebdf6e.att.json.ots",
+      "stamped": true,
+      "subject_name": "T1_PREREG_AMENDMENT_A3",
+      "subject_sha256": "bdeaa17203ebdf6ebacfec654efd48878b4418404fac3010a8af79554ab8560a"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "bf80d357009892ca.att.json",
+      "attestation_sha256": "810ca03e26b332f31b9bc50240819559c8bb58e5ba335f377ba6583854a546e2",
+      "detail": "proof already present",
+      "proof_file": "bf80d357009892ca.att.json.ots",
+      "stamped": true,
+      "subject_name": "L0_OVERLAY_DATASET_HARNESS_PREREG_pack",
+      "subject_sha256": "bf80d357009892ca7a9d224d6a597579518425592b989aacea64966a325417cc"
+    },
+    {
+      "action": "written",
+      "attestation_file": "bfaf9a583801a282.att.json",
+      "attestation_sha256": "a146bb7a9917a22c1d53062e1092ace37f1016d9b71960ea95677d94eaa73575",
+      "detail": "proof already present",
+      "proof_file": "bfaf9a583801a282.att.json.ots",
+      "stamped": true,
+      "subject_name": "F1_FORWARD_GUIDANCE_TRIAL_PREREG_v03",
+      "subject_sha256": "bfaf9a583801a282cb61ffcaeb55797e04cbdd746668eaa7e95e8e0f5aac1ce4"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "c8f75e5bc8a184c5.att.json",
+      "attestation_sha256": "f83d638b6b33f15d6cefa789c31bd2d1affe3bed95168082575018c91172b30f",
+      "detail": "proof already present",
+      "proof_file": "c8f75e5bc8a184c5.att.json.ots",
+      "stamped": true,
+      "subject_name": "L1_FORECAST_ERROR_CORRECTOR_PREREG_v01",
+      "subject_sha256": "c8f75e5bc8a184c5c35d92c5d366c89d36ca445d0d8535d46eb244615b14076f"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "dbfbec96eef64463.att.json",
+      "attestation_sha256": "fcc293a73a67bc3257bc88d7765c9b82c3c24bbe9591f5f407773f8ee4a04588",
+      "detail": "proof already present",
+      "proof_file": "dbfbec96eef64463.att.json.ots",
+      "stamped": true,
+      "subject_name": "DRIFT_DEMO_PREREG",
+      "subject_sha256": "dbfbec96eef644630722f952f8496d62e4f74f78ef8f728f1202279b00eabcf3"
+    },
+    {
+      "action": "unchanged",
+      "attestation_file": "e0c6d2cb9f093fdd.att.json",
+      "attestation_sha256": "2ef1b9283cfdc5d05fdaf3f1f3ff808605e182fcda2cfae7059d0159e7ce45ca",
+      "detail": "proof already present",
+      "proof_file": "e0c6d2cb9f093fdd.att.json.ots",
+      "stamped": true,
+      "subject_name": "T2_LIVE_PREREG_v02_repo",
+      "subject_sha256": "e0c6d2cb9f093fddd918af6f92d06b38d5d6017fcd1353abd962e29ee4421c58"
+    },
+    {
+      "action": "written",
+      "attestation_file": "ecf9408cccdb30c8.att.json",
+      "attestation_sha256": "5f08b0fa2ae17a7920572a82483d353b66f8fd931e8812201e99687902b3c1cf",
+      "detail": "proof already present",
+      "proof_file": "ecf9408cccdb30c8.att.json.ots",
+      "stamped": true,
+      "subject_name": "F1_FORWARD_GUIDANCE_TRIAL_PREREG_v05_draft",
+      "subject_sha256": "ecf9408cccdb30c8af14a07732338a137ddba493921293587f2dd38f181e3554"
+    }
+  ],
+  "generated_utc": "2026-08-30T00:07:55Z",
+  "note": "Each attestation is a canonical JSON record of one declared pin. The .ots proof anchors that record to the Bitcoin chain via OpenTimestamps. Verify with: ots verify <file>.ots \u2014 no trust in Naviguesser, GitHub, or any clock we control is required."
+}

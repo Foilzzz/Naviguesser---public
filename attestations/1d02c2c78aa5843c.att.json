@@ -1,0 +1,9 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "name": "F1_FORWARD_GUIDANCE_TRIAL_PREREG_v04",
+    "note": "class=file; v0.4 Amendment A4 (M0=108, emission 16:30 UTC, 14-lead set, retrieval path declared); OTS-stamped 2026-08-29; SUPERSEDED — artefact amended in place; current bytes pinned under 697fedc6c3d90ac5…",
+    "pinned_utc": "2026-08-29T08:46:16Z",
+    "sha256": "1d02c2c78aa5843cb66498db637ef168ed6fa512884a662eef20069c94cf4355"
+  }
+}

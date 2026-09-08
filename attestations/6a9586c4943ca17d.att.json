@@ -1,0 +1,11 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "bytes": 6448,
+    "name": "T2H_HISTORICAL_DRIFT_PREREG_v11_pack",
+    "note": "class=file; OTS-stamped 2026-08-29 via timestamp/stamp_pins.py",
+    "path": "corpus_intake/CC_UPLOAD_T2H_historical_drift_prereg_v11_2026-08-27.zip",
+    "pinned_utc": "2026-08-29T08:46:16Z",
+    "sha256": "6a9586c4943ca17d697d5b1defe8a97a58475fd3fda884f32da2f40e204e4a11"
+  }
+}

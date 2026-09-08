@@ -1,0 +1,10 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "bytes": 10467,
+    "name": "L1_FORECAST_ERROR_CORRECTOR_PREREG_v02",
+    "note": "class=file; v0.2 EMOS comparator amendment; OTS-stamped 2026-08-29",
+    "path": "corpus_intake/L1_FORECAST_ERROR_CORRECTOR_PREREG.md",
+    "sha256": "764d25d43e224a19d1426afbc2704379bd76df7781c02acf8c0e6b9ec9db8af8"
+  }
+}

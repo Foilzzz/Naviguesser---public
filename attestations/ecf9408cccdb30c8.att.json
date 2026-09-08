@@ -1,0 +1,9 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "name": "F1_FORWARD_GUIDANCE_TRIAL_PREREG_v05_draft",
+    "note": "class=file; v0.5 FIRST DRAFT — OTS-stamped 2026-08-30, then superseded same-day by the concordance correction (status line v0.5; §5.2 f000-f120) before landing anywhere; SUPERSEDED — artefact amended in place; current bytes pinned under 697fedc6c3d90ac5…",
+    "pinned_utc": "2026-08-30T09:30:00Z",
+    "sha256": "ecf9408cccdb30c8af14a07732338a137ddba493921293587f2dd38f181e3554"
+  }
+}

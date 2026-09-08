@@ -1,0 +1,11 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "bytes": 9849,
+    "name": "S1_AMENDMENT_A3_pack",
+    "note": "class=file; OTS-stamped 2026-08-29 via timestamp/stamp_pins.py",
+    "path": "corpus_intake/CC_UPLOAD_S1_amendment_A3_2026-08-28.zip",
+    "pinned_utc": "2026-08-29T08:46:16Z",
+    "sha256": "b2b4d3cf17bbeb9942910c1b2d500fecc62549a5fa3d926f92e865d681a3c34f"
+  }
+}

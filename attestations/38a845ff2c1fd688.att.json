@@ -1,0 +1,11 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "bytes": 7680,
+    "name": "H_ROUTE_PREREG",
+    "note": "class=file; OTS-stamped 2026-08-29 via timestamp/stamp_pins.py",
+    "path": "corpus_intake/H_ROUTE_PREREG.md",
+    "pinned_utc": "2026-08-29T08:46:16Z",
+    "sha256": "38a845ff2c1fd688d89aaa85ae05a1190921f2b6946dcb20b309826099f326e5"
+  }
+}

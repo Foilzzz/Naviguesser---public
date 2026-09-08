@@ -1,0 +1,11 @@
+{
+  "attestation_version": "naviguesser.attestation/1",
+  "subject": {
+    "bytes": 3450,
+    "name": "L0_OVERLAY_DATASET_HARNESS_PREREG_pack",
+    "note": "class=file; OTS-stamped 2026-08-29 via timestamp/stamp_pins.py",
+    "path": "corpus_intake/CC_UPLOAD_L0_overlay_dataset_harness_prereg_2026-08-28.zip",
+    "pinned_utc": "2026-08-29T08:46:16Z",
+    "sha256": "bf80d357009892ca7a9d224d6a597579518425592b989aacea64966a325417cc"
+  }
+}
