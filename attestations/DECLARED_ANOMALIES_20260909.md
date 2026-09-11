@@ -30,3 +30,35 @@ A standing monthly integrity pass re-verifies every pinned artefact against
 its stored digest; a mismatch on this tier is an incident, not an edit. This
 file is amended, never rewritten: new anomalies append; resolved ones are
 struck by a dated amendment line, not deleted.
+
+---
+
+## Amendment — 2026-09-12
+
+**Class (a) is now 3 subjects, not 4.** `e0c6d2cb…` (T2_LIVE_PREREG_v02_repo)
+is cured: the bytes were recovered from the programme's owner-side repository
+mirror and hash to exactly the pinned digest
+(`e0c6d2cb9f093fddd918af6f92d06b38d5d6017fcd1353abd962e29ee4421c58`, 9,073 B).
+The pin is now checkable against the bytes, not only the digest.
+`1d02c2c7…`, `ecf9408c…` and `697fedc6…` remain digest-only.
+
+**Class (b), `bfaf9a58…` — re-binding executed, anchoring pending.** The
+subject document (F1_FORWARD_GUIDANCE_TRIAL_PREREG_v03) is held and
+digest-verified, so the re-binding the text above called mechanical was done:
+the sidecar's current bytes were re-stamped 2026-09-12. The sidecar's own
+content declares v03 superseded by v05 (`697fedc6c3d90ac5…`), and that
+declaration is part of what the new receipt binds. The drifted receipt is
+preserved beside the pair (`bfaf9a583801a282.att.json.ots.drifted-20260908`)
+— never deleted. At this writing the new receipt is pending Bitcoin
+confirmation; the daily anchoring monitor enforces the 24 h fresh-stamp
+grace, and this line is struck when anchoring confirms. `1d02c2c7…` and
+`ecf9408c…` still fail file-binding and wait on class (a).
+
+**Two counts, two properties, both true.** The 44/47 figure above is the
+2026-09-08/09 full verification pass — it measures *file-binding* (receipt
+matches the bytes on disk). The daily anchoring monitor measures a different
+property — whether each receipt is Bitcoin-anchored — and read 48/48 anchored
+on 2026-09-11 (the register has grown since the pass). A reader should not
+reconcile the two numbers against each other; they count different things.
+
+*Amendment mechanics: appended, never rewritten, per this file's own rule.*
