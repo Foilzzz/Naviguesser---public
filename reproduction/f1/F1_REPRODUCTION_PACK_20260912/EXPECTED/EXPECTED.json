@@ -1,0 +1,97 @@
+{
+  "measured_utc": "2026-09-12T06:48:12Z",
+  "register_entries": 38,
+  "chain_head_sha256_of_last_line": "88505f4ca7db598b0dfc933b096b6c29e5bd3cd206933b3543a1a3be3bff3dfd",
+  "guidance_with_bounds": 0,
+  "scored_rows": 0,
+  "excluded_by_prereg_s8": {
+    "count": 15,
+    "rule": "window_close precedes the scorer prereg OTS-stamp instant (2026-09-08T12:05Z)",
+    "guidance_ids": [
+      "1a5f35782ad57e9eed8a6f5fefd2999835741050ccf0199f26372d27666c141c",
+      "40c22ad211a0e62b27c2a11bcfd1ad64c7b0729b413354e4896f9864b554fdcc",
+      "4dedf34cfd8652f4fdfe04c64ef67512ed1983de20c4882009688284ee9b5efd",
+      "5d6825f9f21419f8dbf0505d946c1d3d025ebd64a71ad445eb59be9a699e40ac",
+      "622268bcd19a5dd68ffddb71d0c6121ea050aa58d94cdb328687bd56223c332b",
+      "654bc1acfd1f4febdb338079da2e99b50e69d8dd529fc23fa7e6b4292fa8dfc4",
+      "654e330d2e7a047b94e1c265dbf0edb721abe06220d4b32c7ae74ccce2555fee",
+      "7532e28f37c2ce7161b670174b545b5280f3c6a0f487d871cecf1c2a4b4fed56",
+      "7d4e4a0a77279d5e2b8042e8d09f62f5ac2875bca4fc04c36a21027306d2dd40",
+      "8a00668b9a15a7ea990de58c4c7894a16bd1266c3460c87093d938ed45b48ed3",
+      "906206244e6f7ea14f9b5b9ae55e4ad1dec8e96b0d78a44136ed6370f42a8e7a",
+      "99beed5ed3dc03cc82e6910cb1bd05f3cfdff055f3dd1c77a146eaaf0a893a99",
+      "ad2eb0c25f4710625955e3602953757c461d2118ab9883ef5dc70a0feedb2c17",
+      "be49b35d3cdff139d0a91f3f40b234b6f1f94100fc0fce7a25b4040823e5f809",
+      "c4df82fc60414fc5946191b7026f5cc59fd1f413645d107e4b67dbbabcf8009a"
+    ]
+  },
+  "windows_closed_total": 28,
+  "unscorable_or_open": 23,
+  "refusal_artefacts": [
+    "F1_INVARIANT_2026-09-03_EMIT_ARTEFACT_MISSING.md",
+    "F1_INVARIANT_2026-09-06_EMIT_ARTEFACT_MISSING.md"
+  ],
+  "declared_zero_days": [
+    "emit_2026-08-31.DECLARED_ZERO.md"
+  ],
+  "emit_files": [
+    {
+      "file": "emit_2026-08-30.json",
+      "sha256": "535ab664d14d2bd9dd8f56d3499a168913e867197f2ed94406d164c4856ca198",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-08-31.DECLARED_ZERO.md",
+      "sha256": "0a86962e4caf5c96bbe0e8cd526be69af1627e7c0bcab582e895cab59f7d53b7",
+      "bytes": 2024
+    },
+    {
+      "file": "emit_2026-09-01.json",
+      "sha256": "ed2fb58203a6771b42d972c3cf3a24df922e4c9a922fe295636a0dfa97d28911",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-09-02.json",
+      "sha256": "6466a91cb4cc5294c7b6e57992a6f792004b04a7a8f730a1afb3c3f98e811db4",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-09-04.json",
+      "sha256": "0fb78e65d5213f66539b41de96ed6d84d0cd782c6be2a5d091971448f5ad22ec",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-09-05.json",
+      "sha256": "277b855cd113666acf074b65e7544fd1b64f1e8c541d71ca43eaba82acb292e0",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-09-07.json",
+      "sha256": "c5242a543e2dbc7c804d9742a806e974c7caf9cc08e29e1d6d4282f146b0ac4a",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-09-08.json",
+      "sha256": "a8c9b88dd955b328d08223f6c740a3d52f170a86b6ce50ab5aacc4294cd77283",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-09-09.json",
+      "sha256": "1f2ea84700a7bdfb513ae0374b2681112e72f13bf78aaad88f23f5382402b9b0",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-09-10.json",
+      "sha256": "a268878d748b54744d352f31103bd590071a7eb14171432aa163b1eac546c578",
+      "bytes": 208
+    },
+    {
+      "file": "emit_2026-09-11.json",
+      "sha256": "aa448a66f6c86764f2673d22096eed6d14e37a6b5459dd585560e67b49caebf0",
+      "bytes": 208
+    }
+  ],
+  "first_issued_utc": "2026-08-30T20:09:02.550113Z",
+  "last_issued_utc": "2026-09-11T16:32:12.340035Z",
+  "null_record_note": "Today the record is the null record: 0 scored rows. 15 windows \u00a78-excluded-and-named; the remainder are bounds-less objects governed by the S3 amendment (pinned 2026-09-10, digest f3d7bc61\u2026) \u2014 scorable only once their window closes AND ERA5 coverage exists for it. Reproducing the null record exactly is the check."
+}

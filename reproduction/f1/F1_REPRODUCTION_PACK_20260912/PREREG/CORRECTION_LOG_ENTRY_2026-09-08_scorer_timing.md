@@ -86,9 +86,3 @@ remediation item and is not hidden here. This entry moves to the public URL the 
   entry 35.
 - The third-party scoring offer in the entry is load-bearing for the residual claim. It costs
   nothing to make and everything to quietly drop; it stays.
-
----
-
-## Reproduction pack — 2026-09-12
-
-**F1_REPRODUCTION_PACK_20260912** is published: [F1_REPRODUCTION_PACK_20260912.zip](reproduction/f1/F1_REPRODUCTION_PACK_20260912.zip) — 8,188,027 bytes, sha256 `1f50daf6f541f9f8114971a65793e074e70156e733c7bcbc00d40fe6f08b61e0`. Pins-register entry 27; the zip's own OpenTimestamps receipt is anchored at Bitcoin block 966640. This pack reproduces record integrity and accounting — chain, counts, emissions reconciliation. It does not show the guidance is good; that is the trial's job. The register this entry measured, the §8 exclusion list above, and the scoring offer in the residual are all checkable against the pack's contents. Appended, never rewritten, per this surface's own rule.

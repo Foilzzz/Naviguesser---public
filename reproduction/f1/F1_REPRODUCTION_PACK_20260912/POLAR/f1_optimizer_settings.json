@@ -1,0 +1,39 @@
+{
+  "schema": "f1_optimizer_settings/0",
+  "declared_utc": "2026-08-29",
+  "status": "DECLARED at integration; frozen at the first pinned guidance (prereg §6) — any change is an amendment with a version chain, never a tuning",
+  "corridor_rule": "current corridor = constant COG/SOG rhumb-line extrapolation from the vessel's most recent position report; the 72 h window is 72 one-hour bins sampled at bin midpoints (emission+1.0+k+0.5 h); positions extrapolate from the fix instant, not the emission instant",
+  "candidate_family": {
+    "heading_offsets_deg": [0, -2.5, 2.5, -5, 5, -7.5, 7.5, -10, 10],
+    "held_constant_over_window": true,
+    "tie_break": "argmin over exposure; ties break by (exposure, |offset|, offset) — deterministic",
+    "note": "the current corridor (offset 0) is a family member, so predicted_margin <= 0 structurally; CURRENT_BETTER is unreachable under this family — declared, not a scoring defect"
+  },
+  "timestep_h": 1.0,
+  "manoeuvre_cost": "none — the S1-family no-manoeuvre-cost idealisation (prereg §6)",
+  "wind_interpolation": {
+    "space": "nearest grid point of the declared extract grid",
+    "time": "linear between the bracketing archived lead times (6-hourly — the pinned leads_h are step 6; the '(3-hourly)' text here was a stale v0.2/v0.3 remnant, caught by CC pre-landing 2026-08-30 and corrected at source, never governing behaviour: the code interpolates between whatever leads the extract carries)",
+    "apparent_wind": "vector difference of forecast wind and ship velocity (ship vector = constant COG/SOG); theta_rel = |wrap(wind_FROM - course)| in [0,180], head wind = 0 per the Blendermann convention the A1 artefact carries",
+    "coverage": "a 1 h bin contributes only when EVERY candidate corridor has spatial+temporal coverage (paired masking across the family, so candidate exposures stay comparable); the margin is the paired per-bin mean scaled to 72 bins; coverage_ok = all 72 bins covered"
+  },
+  "wind_extract_contract": {
+    "path_pattern": "accrual/f1_wind/<cycle YYYY-MM-DDTHH, flat ISO dir>/wind_box_<box 0-3>.json",
+    "manifest": "manifest.json in the same cycle dir, shape {\"files\": [{\"path\", \"sha256\", \"bytes\"}]}, pinning every member; verified before any consumption — a failure is a refusal, never a substitute (§10.2's extract-side mirror)",
+    "extract_member_schema": "f1_wind_extract/0 (SHIPPED flat shape, measured on the real pack 2026-08-30 — supersedes the nested draft {cycle, box, grid:{...}} text, which no real artefact ever carried): {schema, box_index, centre: {lat, lon}, half_width_deg: {lat, lon}, grid_step_deg, lats[], lons[], leads_h[], u10_ms[lead][lat][lon], v10_ms[lead][lat][lon], source_cycle, source_manifest_sha256, provenance} — m/s, GEFS u/v convention",
+    "grid": {"step_deg": 1.0, "half_extent_lat_deg": 22.0, "half_extent_lon_deg": 25.0, "centre": "the declared C1 box centre"},
+    "leads_h": [6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96, 102, 108, 114, 120],
+    "_leads_note": "v0.5 (Amendment A5, 2026-08-30): 20 leads, 6..120 step 6 — every archived cycle runs max_lead_h 120 (CC measurement on 20260829/00), so the extended set costs nothing upstream and makes BOTH 00Z and 06Z cycles cover a 16:30Z emission (00Z needs leads 16.5..88.5; 06Z needs 10.5..82.5). Cycle selection is now 'the freshest archived cycle whose leads cover the window — stop if none' (prereg §5.2 A5), because the archiver's cycle hour is not stable (measured: 18Z x7, then 06Z x2, then 00Z on 2026-08-29). Superseded: v0.4's 6..84 step 6 (14 leads) — it covered ONLY a 06Z cycle, by 1.5 h, an undeclared load-bearing coincidence CC caught pre-emission; and before it 3..84 step 3 (28 leads). Odd leads exist upstream but carry no repo-side digest; the extractor's refusal to fetch them is the contract's point, kept.",
+    "source": "repo-side GEFS archive, native 0.5 deg, decimated to 1.0 deg (every 2nd grid point) by the pack's extraction script; the source cycle's repo-side manifest sha256 travels in the pack manifest so the extract chains to a verified cycle",
+    "decimation_note": "nearest-grid on the 1.0 deg extract = nearest-grid on the native 0.5 deg field within 0.5 deg — declared, not hidden"
+  },
+  "cx_curve_selection": {
+    "ais_70_79": "cargo_vessel|laden",
+    "ais_80_89": "tanker|laden",
+    "unknown": "cargo_vessel|laden",
+    "loading_condition": "laden — declared default; no draft source exists in the C1 position shards and the F1 static capture's draught is T1 work",
+    "gate": "the A1 artefact's theta=0 load gate (angular C_X(0) == head-wind anchor) is re-asserted at every load (prereg §5.3)",
+    "note": "UNKNOWN vessels use the declared default curve; the type ignorance is priced by the §7.2 fifth confidence dimension (REDUCED), never by curve guessing"
+  },
+  "margin_units": "C_X * v_rel^2-weighted exposure-hours (prereg §3): sum over bins of C_X(theta) * v_rel_ms^2 * dt_h. The 0.5*rho_air*A_w and ship-speed factors of the A1 windage term are deliberately absent — no vessel particulars exist for UNKNOWN vessels and §1 keeps the A1 model in C_X units. MEASURED AT INTEGRATION (2026-08-29): typical |predicted_margin| is O(10^2-10^3) in these units (e.g. delta-C_X 0.1 x v_rel^2 150 m^2/s^2 x 72 h = 1,080), so the pinned M0 = 0.5 and the M0/4 tie band (§7.2/§7.3) do not bind and INDIFFERENT is emitted only at exact corridor ties. Implemented exactly as pinned — boundaries are never redrawn (D4.4); reported as a v0.4 amendment candidate for the owner's ruling, recorded in accrual/f1/REGISTER_DECLARATION.md"
+}

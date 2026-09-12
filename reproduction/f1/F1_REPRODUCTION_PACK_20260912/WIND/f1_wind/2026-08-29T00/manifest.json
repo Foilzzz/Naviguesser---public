@@ -1,0 +1,49 @@
+{
+ "files": [
+  {
+   "path": "wind_box_0.json",
+   "sha256": "45eae5bb96cb0600bf7fbf5c6720ea63d6293602f62431c08a314ef42ff1f01d",
+   "bytes": 1017693
+  },
+  {
+   "path": "wind_box_1.json",
+   "sha256": "b4fa6420550de89d0a05db10daccbfa5ce3b7e41f76024e2121a440eafa8e36b",
+   "bytes": 1015055
+  },
+  {
+   "path": "wind_box_2.json",
+   "sha256": "554880f9568645bb6a627e4e8f0ae402c99e43d48b46d6370933414fda3c1641",
+   "bytes": 1015315
+  },
+  {
+   "path": "wind_box_3.json",
+   "sha256": "5968448036abcc0f5331c56ffdd2f4256cb0c12fdc27e9928b32ee65ca4b8971",
+   "bytes": 1000964
+  }
+ ],
+ "source_cycle": "20260829/00",
+ "source_manifest_sha256": "92600dcd0a662dccbe022577ea89eace2157f8c6e66ac6d87705c0c5588c2514",
+ "schema": "f1_wind_extract/0",
+ "leads_h": [
+  6,
+  12,
+  18,
+  24,
+  30,
+  36,
+  42,
+  48,
+  54,
+  60,
+  66,
+  72,
+  78,
+  84,
+  90,
+  96,
+  102,
+  108,
+  114,
+  120
+ ]
+}

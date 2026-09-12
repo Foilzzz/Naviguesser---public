@@ -1,0 +1,51 @@
+{
+ "files": [
+  {
+   "path": "wind_box_0.json",
+   "sha256": "95249d9496095d702eeca101ea5ba99a70b0bb668e389ad8f792ddd387c6600d",
+   "bytes": 624780
+  },
+  {
+   "path": "wind_box_1.json",
+   "sha256": "c076ec54be5aab42d81ec6fd12be4655d2473b53e33046dc4e900d1b694aab88",
+   "bytes": 617717
+  },
+  {
+   "path": "wind_box_2.json",
+   "sha256": "e5e4ffc12d6443b9c7c3140b00b103176cfbb4b8770cb3fae0a3fd5b29227e10",
+   "bytes": 624040
+  },
+  {
+   "path": "wind_box_3.json",
+   "sha256": "af52e7750cb93a3b414ec9026d8db5d1090aa09b23636aef119095c67ad9d3cb",
+   "bytes": 603574
+  }
+ ],
+ "source_cycle": "20260902/00",
+ "source_manifest_sha256": null,
+ "schema": "f1_wind_extract/0",
+ "leads_h": [
+  6,
+  12,
+  18,
+  24,
+  30,
+  36,
+  42,
+  48,
+  54,
+  60,
+  66,
+  72,
+  78,
+  84,
+  90,
+  96,
+  102,
+  108,
+  114,
+  120
+ ],
+ "built_by": "analysis/f1_wind_extract_local.py (owner-side replica)",
+ "built_utc": "2026-09-02T07:42:53Z"
+}

@@ -1,0 +1,141 @@
+{
+  "schema_version": "power_model/0",
+  "prereg_sha256": "a9414ac2f1eb4a3b887af5557e7f79f320213a5dc0984f38ac8520462c86fca5",
+  "artefact_status": "DECLARED-UNFITTED — a declared-coefficient parametric instance of the power_model/0 schema. No fit has run; no independence unit is scored; every coefficient value is a declared default anchored to a cited source, pending T1. Any figure derived from this artefact carries the DECLARED-UNFITTED label structurally, and any SVRR rendered from it must say so.",
+  "terms": [
+    {
+      "name": "calm_water_baseline",
+      "form": "P0 = displacement_t^(2/3) * V_stw_kn^3 / C_adm",
+      "units": "kW",
+      "coefficient_source": "declared — admiralty-coefficient form is the canon standard (SNAME, Principles of Naval Architecture; MAN Energy Solutions, Basic Principles of Ship Propulsion, 2018); the C VALUE is a declared default pending the T1 fit, not taken from any single vessel",
+      "status": "declared"
+    },
+    {
+      "name": "windage_raa",
+      "form": "R_aa = 0.5 * rho_air * A_w(loading) * V_rel^2 * C_X(theta_rel), emitted as power at ship speed",
+      "units": "kW",
+      "coefficient_source": "declared — C_X per vessel type/loading from Blendermann (1994): head-wind anchors from the standard head-wind table, angular variation from the full tabulated curves reproduced in Dale (2020) Appendix E (see references and windage_cx_angular); pairs without a tabulated curve stay head-wind-only; Fujiwara regression remains T1 work for those pairs",
+      "status": "declared",
+      "sign_convention": "along-track signed: headwind penalty, following credit (C_X < 0 near theta = 180 flows through the same formula, no special-casing); lateral via induced resistance + steering drag (skeleton section 2, T1)",
+      "windage_area": {
+        "by_loading_condition": true
+      },
+      "sourced_coverage": "theta_rel in [0, 180] (port/starboard symmetric, |theta| used) for container_ship|laden, cargo_vessel|laden, tanker|laden — linear interpolation between tabulated 10-degree points, declared; tanker|ballast and cargo_vessel|container_on_deck remain head-wind only (no tabulated curve exists in the source appendix) and refuse off-axis; |theta| > 180 refuses"
+    },
+    {
+      "name": "hull_degradation_t5",
+      "form": "interface only — monotone drift rate with provenance (skeleton section 2, T5)",
+      "units": "kW",
+      "coefficient_source": "none — T2's measurement; this instance declares the interface and carries no value",
+      "status": "interface_only"
+    }
+  ],
+  "fit": {
+    "method": "none — declared parametric instance; no fit has run. The fit method is named at fit time per G8; the split is declared per G1",
+    "quantile": null,
+    "split": {
+      "rule": "none — nothing is scored by this artefact; the G1 split rule is declared at T1 fit time",
+      "fraction": 0.0,
+      "boundary_utc": "pending — T1",
+      "scored_rows": 0,
+      "fitting_rows": 0,
+      "disjointness_asserted": true
+    }
+  },
+  "independence_unit": "voyage",
+  "statistics": [],
+  "coverage": [
+    {
+      "unit": "none — no independence unit is scored by this declared instance",
+      "coverage": 0.0
+    }
+  ],
+  "weakest_unit_flagged": true,
+  "family": {
+    "alpha": 0.05,
+    "declared": true
+  },
+  "declared_coefficients": {
+    "admiralty_c": {
+      "value": 600.0,
+      "units": "t^(2/3)*kn^3/kW (declared mixed convention)",
+      "source": "declared default pending T1 — published admiralty coefficients cluster roughly 400-700 depending on units convention (SNAME PNA; MAN Basic Principles 2018); the form is canon, the value is a placeholder the T1 fit replaces",
+      "status": "declared_default_pending_T1"
+    },
+    "rho_air": {
+      "value": 1.225,
+      "units": "kg/m^3",
+      "source": "ISA sea-level standard atmosphere, declared constant (not fitted, not varied)",
+      "status": "declared_constant"
+    }
+  },
+  "windage_cx_headwind_by_type_loading": {
+    "container_ship|laden": {
+      "value": 0.55,
+      "source": "Blendermann (1994) head-wind C_X table, as reproduced in the NTNU thesis appendix (2021) and ITTC-referenced compilations"
+    },
+    "cargo_vessel|laden": {
+      "value": 0.65,
+      "source": "Blendermann (1994) head-wind C_X table (cargo vessel, loaded)"
+    },
+    "cargo_vessel|container_on_deck": {
+      "value": 0.55,
+      "source": "Blendermann (1994) head-wind C_X table (cargo vessel, container on deck)"
+    },
+    "tanker|laden": {
+      "value": 0.9,
+      "source": "Blendermann (1994) head-wind C_X table (tanker, loaded)"
+    },
+    "tanker|ballast": {
+      "value": 0.75,
+      "source": "Blendermann (1994) head-wind C_X table (tanker, ballast) — the loading-condition split the owner's ruling requires: ballast carries MORE windage area, and the table reflects it"
+    }
+  },
+  "windage_cx_angular": {
+    "metadata": {
+      "source": "Blendermann (1994) angular C_X tables, as tabulated in Dale (2020) Appendix E Tables E.2/E.3/E.4 — the appendix presents -C_X per its own preamble; values here are converted (C_X = -(tabulated)), so C_X > 0 is resistance and C_X < 0 is the following-wind credit. C_X is referenced to the frontal projected area at all angles (Blendermann 1994 convention), q on the apparent wind",
+      "extraction_record": "corpus_intake/raw/windage_src/blendermann1994_angular_cx_extraction.json — retrieval path (search-indexed full text; PDF locked post-NVA-migration), raw tabulated values, and the theta=0 cross-validation gate",
+      "interpolation": "linear between tabulated 10-degree points, declared; curves symmetric in port/starboard so |theta| is used; |theta| > 180 refuses",
+      "coverage_limit": "no tanker-ballast and no cargo-with-containers curve exists in Dale (2020) Appendix E (E.1-E.9) — those pairs stay head-wind-only; Fujiwara (1998/2001) is the declared T1 extension for them"
+    },
+    "container_ship|laden": {
+      "angles_deg": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180],
+      "cx": [0.55, 0.47, 0.46, 0.52, 0.52, 0.44, 0.34, 0.26, 0.11, 0.03, -0.08, -0.22, -0.44, -0.58, -0.6, -0.63, -0.58, -0.54, -0.4],
+      "source": "Blendermann (1994) container vessel curve, Dale (2020) Appendix E Table E.2"
+    },
+    "tanker|laden": {
+      "angles_deg": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180],
+      "cx": [0.9, 0.87, 0.95, 0.95, 0.85, 0.72, 0.51, 0.29, 0.03, -0.1, -0.26, -0.32, -0.42, -0.51, -0.57, -0.62, -0.61, -0.6, -0.55],
+      "source": "Blendermann (1994) tanker (loaded) curve, Dale (2020) Appendix E Table E.3"
+    },
+    "cargo_vessel|laden": {
+      "angles_deg": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180],
+      "cx": [0.65, 0.67, 0.77, 0.77, 0.7, 0.52, 0.37, 0.21, 0.05, -0.15, -0.22, -0.29, -0.29, -0.37, -0.47, -0.57, -0.65, -0.59, -0.6],
+      "source": "Blendermann (1994) cargo vessel curve, Dale (2020) Appendix E Table E.4"
+    }
+  },
+  "deliberate_exclusions": {
+    "angular_windage_uncovered_pairs": "angular C_X is carried ONLY for container_ship|laden, tanker|laden, cargo_vessel|laden (Dale 2020 Appendix E). tanker|ballast and cargo_vessel|container_on_deck have no tabulated curve in that source — they remain head-wind-only and refuse off-axis; the Fujiwara regression (1998/2001, ISO 15016-recommended) is the declared T1 extraction work for them",
+    "engine_efficiency_chain": "no specific-consumption coefficient is carried anywhere in this artefact — power-to-consumables conversion is the denomination layer's domain (D1 ConversionFactor with its own provenance), per G7. Verified anchor for D1 when it needs it: MAN project-guide convention, g/kWh at ISO conditions on LCV 42,700 kJ/kg with 5% tolerance (e.g. MAN 5S35ME-B9.5: 173.0 g/kWh at SMCR, per the 2026 sea-trial literature)",
+    "waves_current": "no wave or current term is carried — the Copernicus covariate hooks are T1/T2 intake work; declaring a form without a sourced coefficient would be the failure class this schema exists to block"
+  },
+  "references": [
+    "POWER_MODEL_PREREG_SKELETON.md (sha256 a9414ac2…, landed as docs/PREREGISTRATION_POWER_MODEL.md) — term sheet, guards, hypotheses",
+    "Blendermann, W. (1994), Parameter identification of wind loads on ships, J. Wind Eng. Ind. Aerodyn. 51:339-351 — head-wind C_X and angular C_X curves by vessel type/loading, as tabulated in Dale (2020)",
+    "Dale, T. A. (2020), Development of Simplified Methods for Ship Powering Performance Calculations, MSc thesis, NTNU (hdl.handle.net/11250/2780187) — Table 3.13 (head-wind) and Appendix E Tables E.2/E.3/E.4 (angular); extraction record at corpus_intake/raw/windage_src/blendermann1994_angular_cx_extraction.json",
+    "Fujiwara, T., Ueno, M., Niimura, T. (1998/2001) — angular wind-force regression; ISO 15016-recommended; declared T1 extension for the two pairs Dale (2020) does not tabulate (tanker ballast, cargo with containers on deck)",
+    "ISO 19030:2016 — hull and propeller performance measurement vocabulary (skeleton canon anchor)",
+    "MAN Energy Solutions, Basic Principles of Ship Propulsion (2018); SNAME, Principles of Naval Architecture — admiralty-coefficient form",
+    "MAN B&W project guides (SFOC convention) — cited for the denomination layer, deliberately excluded from this artefact per G7"
+  ],
+  "amendments": [
+    {
+      "id": "A1",
+      "date": "2026-08-21",
+      "what": "angular windage coverage landed for three type|loading pairs (container_ship|laden, tanker|laden, cargo_vessel|laden) via windage_cx_angular; the off-axis refusal narrowed to the two pairs the source appendix does not carry; sign convention now flows the following-wind credit through C_X < 0",
+      "why": "owner directive 2026-08-21 (windage as exploitable force, H-route); sourcing gate passed — converted C_X(0) reproduces the head-wind anchors exactly (0.55 / 0.90 / 0.65), cross-checked against Table 3.13 of the same thesis",
+      "invariants_held": "head-wind anchor 623.892 kW and calm-water anchor 45,599.359 kW unmoved; every estimate still DECLARED-UNFITTED; no fitted values, no denomination, validator-clean",
+      "also_corrected": "the NTNU reproduction is Dale (2020), not 'ntnuopen, 2021' as the references previously said — a citation error, not a value error; the head-wind values themselves were always correct"
+    }
+  ]
+}
