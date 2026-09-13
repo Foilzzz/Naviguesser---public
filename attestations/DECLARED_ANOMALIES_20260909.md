@@ -78,3 +78,30 @@ bytes. Prior receipt states are preserved beside the pair
 
 Class (b) is now **2 subjects** (`1d02c2c7…`, `ecf9408c…`), both still waiting on
 class (a), which stands at 3.
+
+---
+
+## Amendment — 2026-09-13 (second)
+
+**Class (a) is now 2 subjects, not 3.** `697fedc6…`
+(F1_FORWARD_GUIDANCE_TRIAL_PREREG_v05) is **cured**: the pinned bytes were recovered
+from `CC_UPLOAD_F1_A5_LANDING_2026-08-30.zip` (member
+`F1_FORWARD_GUIDANCE_TRIAL_PREREG.md`) and hash to exactly the pinned digest
+(`697fedc6c3d90ac51f36b39281273f14fc86092dfc6b52f3840514f77bab4c14`, 30,327 B).
+The recovered bytes are preserved beside the register at
+`corpus_intake/F1_FORWARD_GUIDANCE_TRIAL_PREREG_v05_PINNED_697fedc6.md`. The live
+document at the pinned path is v06 (Amendment A6), pinned separately under
+`709269bd…` and verified against it today.
+
+**`1d02c2c7…` (v04) and `ecf9408c…` (v05 first draft): hunted, not found — the gap
+is now measured, not open.** Exhaustive owner-side hunt on 2026-09-13: every mid-size
+blob in the repository mirror (1,479 candidates, raw and CRLF-normalised), and every
+text file plus every text member of every zip in the owner workspace (23,386 files,
+187 zips). Neither superseded byte sequence exists in anything held here — both were
+amended in place within a day of pinning, before owner-side retention began. The pins
+still prove each document existed by its anchor date; what is unrecoverable here is
+the superseded *content*, and each pin's own note declares the succession
+(v04 → v05 draft → v05 → current v06). The one remaining route is off-machine copies
+(the relay counterparty's pack archive); it will be checked at the next session and
+this line amended either way. Class (b) stays 2 subjects, waiting on exactly these
+two — a re-bind has no subject to verify against until then.
