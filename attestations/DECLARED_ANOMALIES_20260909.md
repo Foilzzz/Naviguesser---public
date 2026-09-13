@@ -62,3 +62,19 @@ on 2026-09-11 (the register has grown since the pass). A reader should not
 reconcile the two numbers against each other; they count different things.
 
 *Amendment mechanics: appended, never rewritten, per this file's own rule.*
+
+---
+
+## Amendment — 2026-09-13
+
+**Class (b), `bfaf9a58…` — anchoring CONFIRMED; the pending line in the 2026-09-12
+amendment is struck.** The re-stamp anchored at **Bitcoin block 966574** (merkle root
+`9584a7ccd1ff0402ac944b1aba60beca2793edda84ddce3b1d776444a727f47d` in the receipt).
+The upgraded receipt also passes file-binding against the sidecar on disk — receipt and
+sidecar both hash to `a146bb7a9917a22c1d53062e1092ace37f1016d9b71960ea95677d94eaa73575`
+— so this subject is fully cured on both properties the classes measure: anchor and
+bytes. Prior receipt states are preserved beside the pair
+(`.ots.drifted-20260908`, `.ots.pending`, `.ots.pre-upgrade-20260913`) — never deleted.
+
+Class (b) is now **2 subjects** (`1d02c2c7…`, `ecf9408c…`), both still waiting on
+class (a), which stands at 3.
